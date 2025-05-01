@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.model_selection import GridSearchCV 
 from sklearn.linear_model import LinearRegression
 import pickle
+from sklearn import ensemble
 
 
 # Paramètres

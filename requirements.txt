@@ -2,3 +2,5 @@ pandas
 numpy 
 scikit-learn
 requests
+dvc
+dvc[s3]
