@@ -3,18 +3,22 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.linear_model import LinearRegression
 import pickle
 from sklearn import ensemble
-
+from src.tools.config import load_config
 
 # Paramètres
-processed_path = './data/processed_data/'
-model_path = './models/'
+data_config = load_config('./params.yaml')
+
+split_path = data_config['split_path']
+model_path = data_config['model_path']
+normalize_path = data_config['normalize_path']
+split_path = data_config['split_path']
 
 # Création du modèle
 model = LinearRegression()
 
 # Chargement des données
-X = pd.read_csv(processed_path + 'X_train_scaled.csv')
-y = pd.read_csv(processed_path + 'y_train.csv')
+X = pd.read_csv(normalize_path + 'X_train_scaled.csv')
+y = pd.read_csv(split_path + 'y_train.csv')
 
 # Paramètres pour la recherche 
 param_grid = { 

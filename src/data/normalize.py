@@ -1,11 +1,14 @@
 from sklearn.preprocessing import StandardScaler
 import pandas as pd
 import os
+from src.tools.config import load_config
 
 # Paramètres
-raw_path = './data/raw_data/'
-split_path = './data/split_data/'
-normalize_path = './data/normalize_data/'
+data_config = load_config('./params.yaml')
+
+raw_path = data_config['raw_path']  
+split_path = data_config['split_path']
+normalize_path = data_config['normalize_path']
 
 # Normaliser les données
 scaler = StandardScaler()

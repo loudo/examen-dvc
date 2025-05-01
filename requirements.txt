@@ -4,3 +4,5 @@ scikit-learn
 requests
 dvc
 dvc[s3]
+pyyaml
+json

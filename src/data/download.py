@@ -1,13 +1,14 @@
 import pandas as pd
 import requests
 import os
-
-from sklearn.model_selection import train_test_split
+from src.tools.config import load_config
 
 # Paramètres
-url_data = 'https://datascientest-mlops.s3.eu-west-1.amazonaws.com/mlops_dvc_fr/raw.csv'
-raw_path = './data/raw_data/'
-processed_path = './data/processed_data/'
+data_config = load_config('./params.yaml')
+
+url_data = data_config['url_data']
+raw_path = data_config['raw_path']  
+split_path = data_config['split_path']
 fic_data = 'raw.csv'
 
 # Téléchargement du fichier

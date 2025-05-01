@@ -3,3 +3,4 @@
 /models/best_params.pkl
 /data/raw_data/
 /data/preprocessed_data/
+**/__pycache__/
