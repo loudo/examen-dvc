@@ -13,7 +13,10 @@ stages:
     - params.yaml
     - src/data/data_split.py
     outs:
-    - data/split_data/
+    - data/split_data/X_test.csv
+    - data/split_data/X_train.csv
+    - data/split_data/y_test.csv
+    - data/split_data/y_train.csv
   normalize_data:
     cmd: python src/data/normalize.py
     deps:
