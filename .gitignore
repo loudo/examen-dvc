@@ -1,5 +1,3 @@
-/venv
-/clean_data.csv
 /models/model.pkl
 /models/scores.json
 /models/best_params.pkl
