@@ -1,6 +1,7 @@
 raw_path: './data/raw_data/'
 split_path: './data/split_data/'
 normalize_path: './data/normalize_data/'
+prediction_path: './data/prediction_data/'
 url_data: 'https://datascientest-mlops.s3.eu-west-1.amazonaws.com/mlops_dvc_fr/raw.csv'
 model_path: './models/'
 metrics_path: './metrics/'

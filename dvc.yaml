@@ -50,6 +50,8 @@ stages:
     - models/model.pkl
     - params.yaml
     - src/models/evaluate.py
+    outs:
+    - data/prediction_data/predictions.csv
     metrics:
     - metrics/scores.json:
         cache: false
