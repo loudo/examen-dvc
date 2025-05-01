@@ -1,2 +1,4 @@
 /raw_data
-/processed_data
+/split_data
+/normalized_data
+/normalize_data

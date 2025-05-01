@@ -6,6 +6,7 @@ import numpy as np
 # Paramètres
 processed_path = './data/processed_data/'
 model_path = './models/'
+metrics_path = './metrics/'
 
 # Chargement du modèle
 with open(model_path + "model.pkl", "rb") as f:
@@ -30,5 +31,5 @@ results = {
     'rmse': rmse
 }
 
-with open(model_path + "scores.json", "w") as f:
+with open(metrics_path + "scores.json", "w") as f:
     f.write(str(results))

@@ -1,3 +1,5 @@
 /models/model.pkl
 /models/scores.json
 /models/best_params.pkl
+/data/raw_data/
+/data/preprocessed_data/

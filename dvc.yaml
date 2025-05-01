@@ -1,0 +1,31 @@
+stages:
+  download_data:
+    cmd: python src/data/download.py
+    deps:
+    - src/data/download.py
+    outs:
+    - data/raw_data/raw.csv
+  split_data:
+    cmd: python src/data/split_data.py
+    deps:
+    - data/raw_data/raw.csv
+    - src/data/data_split.py
+    outs:
+    - data/split_data/
+  normalize_data:
+    cmd: python src/data/normalize.py
+    deps:
+    - data/split_data/X_test.csv
+    - data/split_data/X_train.csv
+    - src/data/normalize.py
+    outs:
+    - data/normalize_data
+  gridsearch:
+    cmd: python src/models/gridsearch.py
+    deps:
+    - data/normalize_data/X_train_scaled.csv
+    - data/split_data
+    - data/split_data/y_train.csv
+    - src/models/gridsearch.py
+    outs:
+    - models/best_params.pkl
